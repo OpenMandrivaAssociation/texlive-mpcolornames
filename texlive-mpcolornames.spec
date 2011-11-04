@@ -1,3 +1,9 @@
+# revision 23252
+# category Package
+# catalog-ctan /graphics/metapost/contrib/macros/mpcolornames
+# catalog-date 2011-07-18 09:05:38 +0200
+# catalog-license lppl
+# catalog-version 0.20
 Name:		texlive-mpcolornames
 Version:	0.20
 Release:	1
@@ -75,6 +81,7 @@ specifications.
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/spec-x11nam-def.awk
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/spec-xcolor-sty.awk
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/tab-clash-svg-dvips.awk
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -85,3 +92,5 @@ specifications.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
