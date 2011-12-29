@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The MetaPost format plain.mp provides only five built-in colour
@@ -31,20 +28,12 @@ different colour sets in different colour models available to
 MetaPost. Colour sets include X11, SVG, DVIPS and xcolor
 specifications.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -82,7 +71,6 @@ specifications.
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/spec-x11nam-def.awk
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/spec-xcolor-sty.awk
 %doc %{_texmfdistdir}/source/metapost/mpcolornames/tab-clash-svg-dvips.awk
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,5 +81,3 @@ specifications.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
