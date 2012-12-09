@@ -81,3 +81,17 @@ specifications.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.20-2
++ Revision: 754115
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.20-1
++ Revision: 719069
+- texlive-mpcolornames
+- texlive-mpcolornames
+- texlive-mpcolornames
+- texlive-mpcolornames
+
