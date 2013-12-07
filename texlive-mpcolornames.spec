@@ -6,7 +6,7 @@
 # catalog-version 0.20
 Name:		texlive-mpcolornames
 Version:	0.20
-Release:	2
+Release:	3
 Summary:	XXXX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/mpcolornames
