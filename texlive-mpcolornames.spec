@@ -1,6 +1,6 @@
 Name:		texlive-mpcolornames
 Version:	23252
-Release:	1
+Release:	2
 Summary:	XXXX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/mpcolornames
