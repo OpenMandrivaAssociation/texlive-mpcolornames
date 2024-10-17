@@ -3,7 +3,7 @@ Version:	23252
 Release:	2
 Summary:	XXXX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/mpcolornames
+URL:		https://www.ctan.org/tex-archive/graphics/metapost/contrib/macros/mpcolornames
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mpcolornames.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mpcolornames.doc.r%{version}.tar.xz
